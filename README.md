@@ -12,15 +12,14 @@ Contoh infinite loop dalam pemrograman adalah:
 
 // dalam bahasa java
 
-public class InfiniteLoopExample {
 
-    public static void main(String[] args) {
-        while (true) {
-            System.out.println("This is an infinite loop");
-        }
-    }
-
-}
+    	public class InfiniteLoopExample {
+    		public static void main(String[] args) {
+        		while (true) {
+            			System.out.println("This is an infinite loop");
+        		}
+    		}
+	}
  
 
 Di sini, perulangan dilakukan dengan kondisi true, sehingga perulangan akan terus berlangsung tanpa ada kondisi dasar yang akan menghentikan perulangan.
