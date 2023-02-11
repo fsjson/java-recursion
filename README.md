@@ -11,12 +11,15 @@ Infinite loop adalah suatu kondisi di mana perulangan tidak memiliki kondisi das
 Contoh infinite loop dalam pemrograman adalah:
 
 // dalam bahasa java
+
 public class InfiniteLoopExample {
+
     public static void main(String[] args) {
         while (true) {
             System.out.println("This is an infinite loop");
         }
     }
+
 }
  
 
