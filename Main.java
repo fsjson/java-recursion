@@ -1,21 +1,21 @@
 public class Main{
-	
 
-    // main Method
     public static void main(String[] args){
 
         System.out.println("\n\n==============JAVA RECURSION===========\n");
+
         // calling ( sum method )
-        int result = hitung(5);
+
+        int result = calculate(5);
         System.out.println("The result is: " + result);
 
         int results = sum(100);
         System.out.println("The second result is: "  + results);
 
 
-        System.out.println("\n\n========Menghitung Faktorial suatu bilangan=======\n");
+        System.out.println("\n\n========Calculate Factorial in a Numbers=======\n");
         int number = 5;
-        System.out.println("Faktorial dari " + number +  " adalah, " + factorial(number));
+        System.out.println("Factorial from " + number +  " is, " + factorial(number));
 
 
         System.out.println("\n==============Halting Condition===========\n"); // recursive statement // nested recursive
@@ -24,21 +24,22 @@ public class Main{
 
     }
 
-    
-
     // a simple recursion method!
 
-    // yang pertama
-    private static int hitung(int parameter) {
+        // Fist
+
+    private static int calculate(int parameter) {
         if (parameter > 0) {
-            return parameter + hitung(parameter-1);
+            return parameter + calculate(parameter-1);
         } else {
             return 0;
         }
     }
 
-    // yang kedua
-    // menghitung faktorial suatu bilangan
+        // Second
+
+            // Calculate Factorial in a Numbers
+
         public static int factorial(int n) {
             if (n == 0) {
                 return 1;
@@ -48,9 +49,8 @@ public class Main{
         }
 
 
+        // first sum method
 
-
-    // first sum method
     private static int sum(int parameter){
         if (parameter > 0){
             return parameter + sum(parameter -1);
@@ -68,7 +68,8 @@ public class Main{
     // then output will be = 0
 
 
-    // second sum method
+        // second sum method
+
     public static int sum(int start, int end) {
         if (end > start) {
             return end + sum(start, end - 1);
@@ -76,9 +77,5 @@ public class Main{
             return end;
         }
     }
-
-
-
-
 
 }
