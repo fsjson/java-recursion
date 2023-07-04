@@ -2,24 +2,19 @@ public class Main{
 
     public static void main(String[] args){
 
-        System.out.println("\n\n==============JAVA RECURSION===========\n");
+        System.out.println("==============JAVA RECURSION===================");
 
         // calling ( sum method )
 
         int result = calculate(5);
         System.out.println("The result is: " + result);
 
-        int results = sum(100);
-        System.out.println("The second result is: "  + results);
+        System.out.println("========Calculate Factorial in a Numbers=======");
+        int number = 3;
+        System.out.println("Factorial from " + number +  ": " + factorial(number));
 
-
-        System.out.println("\n\n========Calculate Factorial in a Numbers=======\n");
-        int number = 5;
-        System.out.println("Factorial from " + number +  " is, " + factorial(number));
-
-
-        System.out.println("\n==============Halting Condition===========\n"); // recursive statement // nested recursive
-        int result_2 = sum(15, 100);
+        System.out.println("==============Halting Condition================"); // recursive statement or nested recursive
+        int result_2 = sum(5, 10);
         System.out.println("the result is: " + result_2);
 
     }
@@ -47,7 +42,9 @@ public class Main{
                 return n * factorial(n - 1);
             }
         }
-
+                // Note: variable "n" here means: n -- > n(value of numbers/variable)
+                    // EX: n(3) then, ( n(3) + n(2) = [5] ) + n(1) = [6]
+                    // More Explanation in below!
 
         // first sum method
 
@@ -60,12 +57,21 @@ public class Main{
     }
 
 
-    // the example above is:
-    // (5 + sum( 4 ) = 9 + sum( 3 ) = 12 + sum( 2 ) + 14 + sum( 1 ) = 15)
+/*
 
-    // so, the result is 15.
-    // and, if the statement are else,
-    // then output will be = 0
+EXPLAINED:
+    the example above is:
+        (5 + sum( 4 ) = 9 + sum( 3 ) = 12 + sum( 2 ) + 14 + sum( 1 ) = 15)
+
+        so, the result is 15.
+        and, if the statement are else,
+        then output will be = 0
+
+        The Function of (parameter - 1) it's for reduce from the real value to the reduce value.
+        example: real value that in input user(5), so 5 will be - 1 = [4].
+        and we got 5 + sum(4 - 1 = [3]) = 9 ETC...
+
+*/
 
 
         // second sum method
